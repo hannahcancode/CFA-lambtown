@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  # resources :posts, :shallow => true do
+  #   resources :comments
+  resources :comments
   resources :posts
+  # end
   devise_for :users
   root 'pages#home'
 
