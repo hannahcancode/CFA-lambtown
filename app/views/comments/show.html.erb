@@ -15,9 +15,11 @@
   <%= @comment.user %>
 </p>
 
-<%= @comments.each do |comment| %>
+<% @comments.each do |comment| %>
   <p><%= comment.user.email %></p>
   <p><%= comment.content %></p>
 
+<% end %>
+
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Back', post_comments_path %>
